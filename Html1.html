@@ -1,14 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Love You</title>
     <style>
         @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
 
         body {
@@ -17,14 +16,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: white;
+            background-color: #fff;
         }
+
         .heart {
             position: relative;
             width: 300px;
             height: 300px;
             animation: heartbeat 1s infinite;
         }
+
         .heart:before,
         .heart:after {
             content: "";
@@ -33,27 +34,30 @@
             width: 150px;
             height: 240px;
             border-radius: 150px 150px 0 0;
-            background: white;
-            border: 5px solid red;
+            background: #fff;
+            border: 5px solid #ff0000;
         }
+
         .heart:before {
             left: 150px;
             transform: rotate(-45deg);
             transform-origin: 0 100%;
         }
+
         .heart:after {
             left: 0;
             transform: rotate(45deg);
             transform-origin: 100% 100%;
         }
+
         .text {
             position: absolute;
-            top: -50px;
+            top: -60px;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Times New Roman', Times, serif;
             font-size: 48px;
-            color: red;
+            color: #ff0000;
             text-align: center;
             white-space: nowrap;
         }
@@ -61,7 +65,7 @@
 </head>
 <body>
     <div class="heart">
-        <div class="text">I love You<br>I Love You</div>
+        <div class="text">I Love You<br>I Love You</div>
     </div>
 </body>
 </html>
